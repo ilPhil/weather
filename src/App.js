@@ -7,9 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="weather-wrapper">
-        <Card place="Roma"/>
+        <Card place="Newyork"/>
         <Card place="Milano"/>
-        <Card place="Genova"/>
+        <Card place="Budapest"/>
       </div>
     );
   }

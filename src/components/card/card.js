@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
+import Moment from 'moment';
+
 import './card.css';
+
 import map from '../../assets/map.svg';
 import cloudLight from '../../assets/cloud-lightning.svg';
+import cloudRain from '../../assets/cloud-rain.svg';
+import cloudSnow from '../../assets/cloud-snow.svg';
+import cloud from '../../assets/cloud.svg';
 import sun from '../../assets/sun.svg'
 import droplet from '../../assets/droplet.svg'
 import wind from '../../assets/wind.svg'
@@ -42,9 +48,36 @@ class Card extends Component {
            wind:data.query.results.channel.wind.speed,
            humidity:data.query.results.channel.atmosphere.humidity,
            visibility:data.query.results.channel.atmosphere.visibility,
+           date:data.query.results.channel.item.condition.date,
            isLoading: false }))
 
        .catch(error => this.setState({ error, isLoading: false }));
+   }
+
+   iconWeather = () => {
+     let icon;
+     if( this.state.name){
+
+       const name = this.state.name.toLowerCase()
+
+       if (name.search('rain') !== -1) {
+         icon = <img className="weather__icon" src={cloudRain} alt="cloud rain icon"/>
+       }
+       else if (name.search('storm') !== -1) {
+         icon = <img className="weather__icon" src={cloudLight} alt="cloud light icon"/>
+       }
+       else if (name.search('snow') !== -1) {
+         icon = <img className="weather__icon" src={cloudSnow} alt="cloud snow icon"/>
+       }
+       else if (name === 'clear' || name === 'hot' || name === 'sunny') {
+         icon = <img className="weather__icon" src={sun} alt="sun"/>
+       }
+       else {
+         icon = <img className="weather__icon" src={cloud} alt="cloud icon"/>
+       }
+
+     }
+     return icon;
    }
 
 
@@ -58,7 +91,7 @@ class Card extends Component {
         </div>
         <div className="card__content">
           <div className="weather">
-            <img className="weather__icon" src={cloudLight} alt="cloud-icon"/>
+            {this.iconWeather()}
           </div>
           <div className="info">
             <div className="info__weather">
@@ -69,8 +102,8 @@ class Card extends Component {
               </div>
             </div>
             <div className="info__date">
-              <h1> MAY </h1>
-              <h2> 21 </h2>
+              <h1>{Moment(this.props.date).format('MMM').toUpperCase()}</h1>
+              <h1> {Moment(this.props.date).format('DD')} </h1>
             </div>
           </div>
         </div>
