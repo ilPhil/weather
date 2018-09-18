@@ -8,6 +8,8 @@ class App extends Component {
     return (
       <div className="weather-wrapper">
         <Card/>
+        <Card/>
+        <Card/>
       </div>
     );
   }

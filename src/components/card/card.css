@@ -1,3 +1,10 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
+
+
+
+/* STYLE */
 .card {
   position: relative;
   width: 400px;
@@ -5,6 +12,7 @@
   border-radius: 10px;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card::after {
@@ -31,13 +39,18 @@
   opacity: 1;
 }
 
-
 .card__header {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  height: 35px;
+  /* height: 35px; */
   background-color: #F0F8FA;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+.map-icon {
+  margin: 15px;
 }
 
 .card__content {
@@ -47,10 +60,86 @@
   background-color: #F0F8FA;
 }
 
+.weather {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__icon {
+  width: 25%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  height: 25%;
+}
+
+.info__date {
+  width: 70px;
+  height: 70px;
+  background: #53B9E6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.info__date h1,
+.info__date h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.info__weather {
+  color: #A5ADB0;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.degrees {
+  font-weight: 200;
+  font-size: 50px;
+  padding: 0px 20px;
+}
+
+.weather-name {
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.location {
+  font-size: 14px;
+}
+
 .card__footer {
   width: 100%;
   height: 150px;
   background: #2E3336;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.card__footer .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.card__footer .item  p {
+  padding-left: 10px;
 }
