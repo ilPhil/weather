@@ -9,7 +9,7 @@ class App extends Component {
       <div className="weather-wrapper">
         <Card place="Newyork"/>
         <Card place="Milano"/>
-        <Card place="Budapest"/>
+        <Card place="Tokyo"/>
       </div>
     );
   }
