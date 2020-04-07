@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from "react";
+import fakeResponse from "./services/fakeData";
+import "./App.css";
 
-import Card from './components/card/card';
+import Card from "./components/card";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="weather-wrapper">
-        <Card place="Newyork"/>
-        <Card place="Milano"/>
-        <Card place="Tokyo"/>
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div className="weather-wrapper">
+      <Card data={fakeResponse} />
+      <Card data={fakeResponse} />
+      <Card data={fakeResponse} />
+    </div>
+  );
 }
-
-export default App;
