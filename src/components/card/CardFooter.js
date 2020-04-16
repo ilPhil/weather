@@ -16,7 +16,7 @@ const CardFooter = ({ windStrength, humidity, visibility }) => (
     </div>
     <div className="item">
       <img src={sun} alt="hot-icon" />
-      <p>{visibility}%</p>
+      <p>{visibility}</p>
     </div>
   </div>
 );
