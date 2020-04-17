@@ -6,8 +6,17 @@ Weather Card
 
 ## Getting started
 
-1. To install dependencies run `npm i`
-2. To start the project execute `npm start`
+1. To install dependencies run
+
+```sh
+npm install
+```
+
+2. To start the project execute
+
+```sh
+npm start
+```
 
 ## Stack
 
