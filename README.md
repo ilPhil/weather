@@ -2,7 +2,7 @@
 
 Weather Card
 
-<img src="https://res.cloudinary.com/db46klhlo/image/upload/v1537315008/weather.jpg" width="500" height="700">
+<img src="https://res.cloudinary.com/db46klhlo/image/upload/v1537315008/weather.jpg" width="500" height="550">
 
 ## Getting started
 
