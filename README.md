@@ -1,6 +1,6 @@
 # Weather
 
-EXAMPLE: https://weather.stefanorusso.io/
+**Live Demo**:https://weather.stefanorusso.io/
 
 Weather Card
 
